@@ -1,0 +1,237 @@
+
+:root {
+    --golden: #FEBB50;
+    --black: #212121;
+    --fontName: "Great Vibes", sans-serif;
+  }
+
+body, html {
+    overflow-x: hidden;
+    font-family: "Dosis", sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 0;
+    background: var(--black);
+    box-shadow: 0 -6px 10px -5px hsl(0deg 0% 44% / 30%);
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar .navbar-nav {
+    flex-direction: inherit;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.navbar .navbar-nav .nav-item {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+    padding: 0.6rem 2rem 0.3rem 2rem;
+    transition: all 0.4s ease;
+}
+
+.nav-link:hover {
+    background-color: white;
+}
+
+.navbar .navbar-nav .nav-item .active {
+    color: var(--black);
+    background-color: var(--golden);
+}
+
+@media (max-width: 699px) {
+    .dtext{
+        display: none !important;
+    }
+}
+
+
+/* SECTION */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+}
+
+/* STORY */
+.section-story {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    /* background-image: url('https://images.says.com/uploads/story_source/source_image/966850/1f86.jpg'); */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("https://images.says.com/uploads/story_source/source_image/966850/1f86.jpg"); */
+    background-color: var(--black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 992px){
+    .section-story {
+        padding-top: 50px;
+    }
+}
+
+/* .section-story::before {
+    content: "";
+    width: 100%;
+    min-height: 103vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* .section-story .imgLove{
+    position: absolute;
+    width: 40%;
+    left: 28%;
+    top: 20px;
+    margin-top: 10%;
+    -webkit-animation: floatBubble 2s infinite alternate;
+    animation: floatBubble 2s infinite alternate;
+}
+
+@media (max-width: 692px){
+    .section-story .imgLove {
+        position: absolute;
+        width: 70%;
+        left: 15%;
+        top: 20px;
+        margin-top: 10%;
+        -webkit-animation: floatBubble 2s infinite alternate;
+        animation: floatBubble 2s infinite alternate;
+    }
+} */
+
+
+@-webkit-keyframes floatBubble {
+    0% {
+        top:10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes floatBubble {
+    0% {
+        top:10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+
+.section-story .imgLove{
+    width: 13%;
+}
+
+.section-story .word {
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.section-story .word h1 {
+    font-family: "Merriweather", sans-serif;
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 46px;
+    color: #FEBB50;
+    line-height: 1 !important;
+}
+
+.section-story .word h2 {
+    font-family: "Questrial", sans-serif;
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 21px;
+    color: #FEBB50;
+    line-height: 1 !important;
+}
+
+.section-story .word h3 {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 21px;
+    line-height: 2 !important;
+}
+
+.section-story .word h4 {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800px;
+    font-size: 21px;
+    line-height: 2 !important;
+}
+
+@media (max-width: 699px) {
+
+    .section-story .imgLove{
+        width: 35%;
+    }
+
+    .section-story .word h1 {
+        font-size: 38px;
+        line-height: 1 !important;
+    }
+
+    .section-story .word h2 {
+        font-size: 20px;
+        line-height: 0.5 !important;
+    }
+
+    .section-story .word h3 {
+        font-size: 18px;
+        line-height: 2 !important;
+    }
+
+    .section-story .word h4 {
+        font-size: 14px;
+        line-height: 4 !important;
+    }
+}
+
+/* .section-story::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--golden), transparent);
+    z-index: 1000;
+} */
+
+
+.section-story-2 {
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 5%;
+}
+
