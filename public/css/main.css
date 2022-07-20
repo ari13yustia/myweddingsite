@@ -2,11 +2,14 @@
 :root {
     --golden: #FEBB50;
     --black: #212121;
-    --fontName: "Great Vibes", sans-serif;
+    --fontGreateVibes: "Great Vibes", sans-serif;
+    --fontMerriweather: "Merriweather", sans-serif;
+    --fontQuestrial: "Questrial", sans-serif;
+    --fontRaleway: "Raleway", sans-serif;
   }
 
 body, html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: "Dosis", sans-serif;
     font-size: 1rem;
     color: #333;
@@ -50,7 +53,7 @@ dl, ol, ul {
 }
 
 .nav-link:hover {
-    background-color: white;
+    background-color: var(--black);
 }
 
 .navbar .navbar-nav .nav-item .active {
@@ -70,15 +73,15 @@ section {
     position: relative;
     width: 100%;
     height: 100vh;
-    padding: 100px;
+    padding: 35px;
 }
 
 /* STORY */
-.section-story {
+.section-home {
     position: relative;
     width: 100%;
-    height: 550px;
-    /* background-image: url('https://images.says.com/uploads/story_source/source_image/966850/1f86.jpg'); */
+    height: auto;
+    background-image: url('https://i.pinimg.com/originals/ac/4d/8a/ac4d8ad5beb061fe6a39e948fdd36589.gif');
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url("https://images.says.com/uploads/story_source/source_image/966850/1f86.jpg"); */
     background-color: var(--black);
@@ -87,76 +90,26 @@ section {
     background-size: cover;
 }
 
+
 @media (min-width: 992px){
-    .section-story {
+    .section-home {
         padding-top: 50px;
     }
 }
 
-/* .section-story::before {
-    content: "";
-    width: 100%;
-    min-height: 103vh;
-    background: rgba(0, 0, 0, 0.5);
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-
-/* .section-story .imgLove{
-    position: absolute;
-    width: 40%;
-    left: 28%;
-    top: 20px;
-    margin-top: 10%;
-    -webkit-animation: floatBubble 2s infinite alternate;
-    animation: floatBubble 2s infinite alternate;
+.section-home .imgLove{
+    padding-top: 1%;
+    width: 10%;
 }
 
-@media (max-width: 692px){
-    .section-story .imgLove {
-        position: absolute;
-        width: 70%;
-        left: 15%;
-        top: 20px;
-        margin-top: 10%;
-        -webkit-animation: floatBubble 2s infinite alternate;
-        animation: floatBubble 2s infinite alternate;
-    }
-} */
-
-
-@-webkit-keyframes floatBubble {
-    0% {
-        top:10px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:10px;
-    }
-    100% {
-        top: 0px;
-    }
-}
-
-
-.section-story .imgLove{
-    width: 13%;
-}
-
-.section-story .word {
+.section-home .word {
     text-align: center;
     position: relative;
     color: white;
 }
 
-.section-story .word h1 {
-    font-family: "Merriweather", sans-serif;
+.section-home .word h1 {
+    font-family: var(--fontMerriweather);
     font-style: normal;
     font-weight: 800px;
     font-size: 46px;
@@ -164,8 +117,8 @@ section {
     line-height: 1 !important;
 }
 
-.section-story .word h2 {
-    font-family: "Questrial", sans-serif;
+.section-home .word h2 {
+    font-family: var(--fontQuestrial);
     font-style: normal;
     font-weight: 800px;
     font-size: 21px;
@@ -173,65 +126,211 @@ section {
     line-height: 1 !important;
 }
 
-.section-story .word h3 {
-    font-family: "Raleway", sans-serif;
+.section-home .word h3 {
+    font-family: var(--fontRaleway);
     font-style: normal;
     font-weight: 800px;
     font-size: 21px;
     line-height: 2 !important;
 }
 
-.section-story .word h4 {
-    font-family: "Raleway", sans-serif;
+.section-home .word h4 {
+    font-family: var(--fontRaleway);
     font-style: normal;
     font-weight: 800px;
     font-size: 21px;
     line-height: 2 !important;
 }
 
+/* section story mobile */
 @media (max-width: 699px) {
-
-    .section-story .imgLove{
+    .section-home {
+        padding-bottom: 20%;
+        padding-top: 20%;
+    }
+    .section-home .imgLove{
+        padding-top: 5%;
         width: 35%;
     }
 
-    .section-story .word h1 {
+    .section-home .word h1 {
         font-size: 38px;
         line-height: 1 !important;
     }
 
-    .section-story .word h2 {
+    .section-home .word h2 {
         font-size: 20px;
         line-height: 0.5 !important;
     }
 
-    .section-story .word h3 {
+    .section-home .word h3 {
         font-size: 18px;
         line-height: 2 !important;
     }
 
-    .section-story .word h4 {
+    .section-home .word h4 {
         font-size: 14px;
         line-height: 4 !important;
     }
 }
 
-/* .section-story::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.section-story {
+    position: relative;
+    display: flex;
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, var(--golden), transparent);
-    z-index: 1000;
-} */
-
-
-.section-story-2 {
-    background-color: white;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 5%;
+    height: auto;
 }
 
+.section-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('/icons/golden_moon_2.png');
+    background-color: white;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.25;
+}
+
+.section-story .card {
+    margin-bottom: 2%;
+    background-color: var(--black);
+    font-family: var(--fontQuestrial);
+}
+
+.card-title{
+    color: var(--golden);
+}
+
+.card-subtitle{
+    color: var(--golden);
+}
+
+.card p {
+    color: white;
+}
+
+.story-header {
+    text-align: center;
+    font-family: var(--fontGreateVibes);
+    padding-bottom: 3%;
+}
+
+.story-header h1 {
+    font-size: 42px;
+}
+
+.story-header img {
+    width: 30%;
+}
+
+
+/* section story mobile */
+@media (max-width: 699px) {
+    .section-story .container{
+        padding-bottom: 30%;
+    }
+}
+
+
+.section-gallery {
+    position: relative;
+    background-color: var(--black);
+}
+
+.section-gallery .row img {
+    width: 100%;
+}
+
+.gallery-header {
+    text-align: center;
+    font-family: var(--fontGreateVibes);
+    padding-bottom: 3%;
+}
+
+.gallery-header h1 {
+    font-size: 42px;
+    color: var(--golden);
+}
+
+.gallery-header img {
+    width: 30%;
+}
+
+
+.section-guestbook {
+    position: relative;
+    height: auto;
+    padding-bottom: 20%;
+}
+
+.section-guestbook::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('/icons/golden_moon_2.png');
+    background-color: white;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.25;
+}
+
+.section-guestbook .guestbook_header {
+    text-align: center;
+    font-family: var(--fontGreateVibes);
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.section-guestbook .card {
+    background-color: var(--black);
+}
+
+.floating_button {
+    color: var(--black);
+    background-color: white;
+    position: fixed;
+    z-index: 1030;
+    bottom: 70px;
+    right: 43%;
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.floating_button img {
+    width: 10%;
+}
+
+.floating_button button {
+    font-size: 12px;
+    font-weight: 400px;
+    font-family: var(--fontRaleway);
+}
+
+@media (max-width: 699px) {
+    .floating_button {
+        bottom: 60px;
+        right: 32%;
+        width: 35%;
+    }
+
+    .floating_button img {
+        width: 13%;
+    }
+
+    .floating_button button {
+        font-size: 12px;
+        font-weight: 400px;
+        font-family: var(--fontRaleway);
+    }
+}
